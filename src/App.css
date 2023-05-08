@@ -1,38 +1,90 @@
-.App {
+.app {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: rgb(247, 247, 247);
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px -1px 0px 0px inset;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid #DDDDDD;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header_container {
+  display: grid;
+  place-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.body {
+  height: calc(100vh - 8.125rem);
+}
+
+.wrapper {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 1.25rem;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+  font-size: .9375rem;
+  font-weight: 600;
+  line-height: 19px;
+}
+
+.input_text {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #DDDDDD;
+  border-radius: .75rem;
+  color: rgb(113, 113, 113);
+}
+
+.input_text:focus, .input_text:focus-visible {
+  outline: none;
+  border: 1px solid rgb(34, 34, 34);
+}
+
+.input_text--wrong {
+  border: 1px solid rgb(255, 56, 92);
+}
+
+.button {
+  height: 3rem;
+  width: 100%;
+  background-color: rgb(255, 56, 92);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  border: 0;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: rgb(255, 56, 92);
+  height: 3.125rem;
+  display: grid;
+  place-items: center;
+}
+
+.footer_developer {
+  font-size: .875rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrong {
+  color: rgb(255, 56, 92);
+  font-size: .875rem;
 }
