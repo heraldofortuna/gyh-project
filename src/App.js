@@ -1,28 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./App.css";
 
-import Input from "./components/Input";
-import Button from "./components/Button";
+import Password from "./pages/Password";
 
 const App = () => {
-  const [password, setPassword] = useState("");
   const [isCorrectPassword, setIsCorrectPassword] = useState("");
-
-  const handlePasswordInput = (event) => {
-    setPassword(event?.target?.value);
-  };
-
-  const handlePasswordSubmit = () => {
-    if (password?.replace(/\s/g, "")?.toLocaleLowerCase() === "genesisyheraldo") {
-      setIsCorrectPassword(true);
-    };
-  };
-
-  useEffect(() => {
-    setIsCorrectPassword("");
-  }, []);
-
+  
   return (
     <div className="app">
       <header className="header">
@@ -44,16 +28,7 @@ const App = () => {
                 </div>
               </>
             ) : (
-              <>
-                <Input  
-                  label="Ingrese contraseña"
-                  handleInput={handlePasswordInput}
-                />
-                <Button
-                  text="Ingresar"
-                  handleClick={handlePasswordSubmit}
-                />
-              </>
+              <Password setIsCorrectPassword={setIsCorrectPassword} />
             )
           }
         </div>
