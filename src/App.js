@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./App.css";
 
+import Sections from "./pages/Sections";
 import Password from "./pages/Password";
 
 const App = () => {
@@ -11,22 +12,14 @@ const App = () => {
     <div className="app">
       <header className="header">
         <div className="header_container">
-          <h1>GyH Project</h1>
+          <h1>Proyecto G y H</h1>
         </div>
       </header>
       <body className="body">
         <div className="wrapper">
           {
             isCorrectPassword ? (
-              <>
-                <div>
-                  <ul>
-                    <li>1. Tonito en Terrazas los 2</li>
-                    <li>2. Fullday en un club</li>
-                    <li>3. Vamos a un estreno en el cine</li>
-                  </ul>
-                </div>
-              </>
+              <Sections />
             ) : (
               <Password setIsCorrectPassword={setIsCorrectPassword} />
             )

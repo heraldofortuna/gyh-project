@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+/* Globals */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+/* --------------- */
+
+/* Header */
 .header {
   background-color: rgb(247, 247, 247);
   height: 5rem;
@@ -15,6 +28,7 @@
   display: grid;
   place-items: center;
 }
+/* --------------- */
 
 .body {
   height: calc(100vh - 8.125rem);
@@ -87,4 +101,45 @@
 .wrong {
   color: rgb(255, 56, 92);
   font-size: .875rem;
+}
+
+/* Sections Page */
+.sections {
+  outline: 1px solid red;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .75rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: .625rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card__title {
+  color: rgb(34, 34, 34);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-break: strict;
+  line-height: 19px;
+  text-align: left;
 }
