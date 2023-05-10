@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 
+import { PasswordProps } from "../types/global";
+
 import Input from "../components/Input";
 import Button from "../components/Button";
 
-const Password = ({ setIsCorrectPassword }) => {
+const Password = ({ setIsCorrectPassword }: PasswordProps) => {
   const [password, setPassword] = useState("");
 
-  const handlePasswordInput = (event) => {
+  const handlePasswordInput = (event: any) => {
     setPassword(event?.target?.value);
   };
 
   const handlePasswordSubmit = () => {
-    const cleanPassword = password?.replace(/\s/g, "")?.toLocaleLowerCase() === "genesisyheraldo";
+    const parsedPassword = password?.replace(/\s/g, "")?.toLocaleLowerCase() === "genesisyheraldo";
     
-    setIsCorrectPassword(cleanPassword);
+    setIsCorrectPassword(parsedPassword);
   };
 
   return (
     <div className="container">
-      <Input  
+      <Input
         label="Ingrese contraseña"
         handleInput={handlePasswordInput}
       />

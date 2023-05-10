@@ -1,6 +1,8 @@
 import React from "react";
 
-const Card = ({ image, title }) => {
+import { CardProps } from "../types/global";
+
+const Card = ({ image, title }: CardProps) => {
   return (
     <div className="card">
       <img className="card__image" src={image} alt={title}/>

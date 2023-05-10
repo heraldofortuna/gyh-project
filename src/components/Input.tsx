@@ -1,6 +1,8 @@
 import React from "react";
 
-const Input = ({ label, handleInput }) => {
+import { InputProps } from "../types/global";
+
+const Input = ({ label, handleInput }: InputProps) => {
   return (
     <label className="input">
       { label }
